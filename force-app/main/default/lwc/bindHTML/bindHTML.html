@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Binding HTML element in LWC" icon-name="standard:merge">
+        <div class="slds-var-m-around_large">
+            Hello, {myValue}!
+        </div>
+        <div style="padding : 20px" >
+        <lightning-input type="checkbox" label="Click me!" value={showMe} onchange={handleChange}> </lightning-input>
+        <template if:true={showMe}>
+        I am Visible
+        </template>
+        <template if:false={showMe}>
+            I am Invisible
+        </template>
+    </div>
+
+    </lightning-card>
+</template>
